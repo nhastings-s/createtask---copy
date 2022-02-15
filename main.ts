@@ -10,13 +10,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite5, otherS
     tiles.placeOnRandomTile(Enemyevil, sprites.dungeon.floorDark0)
 })
 function checkScore () {
-    if (info.score() >= 15) {
+    if (info.score() >= 10) {
         sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
         currentLevel += 1
         Next_level(currentLevel)
         Person = true
-    } else if (info.score() < 15) {
-        game.showLongText("come back with 15 heads to leave", DialogLayout.Bottom)
+    } else if (info.score() < 10) {
+        game.showLongText("come back with 10 heads to leave", DialogLayout.Bottom)
         tiles.placeOnRandomTile(mainCharacter, sprites.dungeon.stairSouth)
         tiles.placeOnRandomTile(swordmainCharacter, sprites.dungeon.stairSouth)
     }
